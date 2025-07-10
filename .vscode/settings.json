@@ -1,20 +1,29 @@
-{"latex-workshop.latex.recipes": [
-    {
-        "name": "pdflatex",
-        "tools": ["pdflatex"]
-    }
-],
-"latex-workshop.latex.tools": [
-    {
+{
+    "latex-workshop.latex.tools": [
+      {
         "name": "pdflatex",
         "command": "pdflatex",
         "args": [
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-output-directory=pdf",
-            "%DOC%"
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-output-directory=pdf",
+          "%DOC%"
         ]
-    }
-],
-"latex-workshop.latex.recipe.default": "pdflatex",
-}
+      },
+      {
+        "name": "move-aux",
+        "command": "sh",
+        "args": [
+          "-c",
+          "mkdir -p tmp; mv pdf/*.aux pdf/*.log pdf/*.out pdf/*.toc pdf/*.synctex.gz tmp/ 2>/dev/null || true"
+        ]
+      }
+    ],
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "pdflatex-and-move-aux",
+        "tools": ["pdflatex", "move-aux"]
+      }
+    ],
+    "latex-workshop.latex.recipe.default": "pdflatex-and-move-aux"
+  }
