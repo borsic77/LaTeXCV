@@ -1,0 +1,205 @@
+% Eine Mischung aus hipstercv, friggeri und twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[verylight]{simplehipstercv}
+% verfügbare Optionen: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+%------------------------------------------------------------------ Variablen
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{Neuer Lebenslauf}
+\author{\LaTeX{} Boris Legradic}
+\date{April 2025}
+
+\pagestyle{empty}
+\begin{document}
+
+\thispagestyle{empty}
+
+%-------------------------------------------------------------
+\section*{Start}
+\simpleheader{headercolour}{Dr. Boris}{Legradic}{F\&E-Ingenieur und Entwickler (De/Fr/En)}{white}
+
+% Muss hier sein, damit paracols startet...
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+\paracolbackgroundoptions
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+
+\bigskip \bigskip
+\begin{center}
+    \roundpic{portrait.jpg}
+\end{center}
+\bigskip \bigskip
+
+\bg{cvgreen}{white}{Über mich}\\[0.5em]
+Eigenes Fahrzeug\\
+Schweiz\\
+Verheiratet, zwei Kinder\\
+
+\bigskip \bigskip
+\bg{cvgreen}{white}{Adresse}\\[0.5em]
+Route des Mûriers 5\\
+1420 Fiez\\
++41 78 90 52 253\\
+
+\bigskip
+\href{mailto:boris.legradic@gmail.com}{boris.legradic@gmail.com \icon{\faAt}{cvgreen}{}}\\
+\href{https://www.linkedin.com/in/borislegradic}{borislegradic \icon{\faLinkedin}{cvgreen}{}}\\
+\href{https://github.com/borsic77}{borsic77 \icon{\faGithub}{cvgreen}{}}
+
+\bigskip \bigskip
+\bg{cvgreen}{white}{Ausbildung}\\[0.5em]
+
+\textbf{Doktor der Naturwissenschaften}\\
+Plasmaphysik\\
+EPFL, Lausanne, 2007–2011\\[0.5em]
+
+\textbf{Diplomingenieur (Master)}\\
+Technische Physik\\
+TU Wien, Österreich, 1999–2006
+
+\bigskip \bigskip
+\bg{cvgreen}{white}{Sprachen}\\[0.5em]
+\begin{tabular}{l ll}
+    \textbf{Deutsch}      & {\phantom{x}\footnotesize Muttersprache} \\
+    \textbf{Englisch}     & \pictofraction{\faCircle}{cvgreen}{4}{black!30}{1}{\tiny} \\
+    \textbf{Französisch}  & \pictofraction{\faCircle}{cvgreen}{4}{black!30}{1}{\tiny} \\
+    \textbf{Italienisch}  & \pictofraction{\faCircle}{cvgreen}{2}{black!30}{3}{\tiny}
+\end{tabular}
+
+\bigskip \bigskip
+\bg{cvgreen}{white}{Interessen}\\[0.5em]
+\textbf{Hausautomation}: Home Assistant\\
+\textbf{Technologie}: Open Source, Weltraum, Robotik\\
+\textbf{Lesen}: Science-Fiction, Wissenschaft\\
+\textbf{Kampfsport}: Vo Vietnam, Qi Gong\\
+\textbf{Klettern}\\
+\textbf{Laufen}: Marathon\\
+
+\vspace{4em}
+\phantom{blättern}
+\phantom{blättern}
+}
+
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+
+\section*{Profil}
+Ich vereine technologische Breite mit analytischer Tiefe: Als promovierter Physiker (EPFL) mit über zehn Jahren Erfahrung in industrieller Forschung und Entwicklung – insbesondere im Bereich Solartechnologien – bringe ich eine strukturierte, lösungsorientierte Denkweise mit. In meiner aktuellen Rolle als Full-Stack-Entwickler habe ich eine leistungsstarke Plattform für Datenanalyse und -management von Grund auf mitentwickelt. Mich motivieren nachhaltige Technologien, Open Source und die Zusammenarbeit in interdisziplinären Teams. Ich liebe es, komplexe Ideen in robuste, praxisnahe Anwendungen zu verwandeln – mit einem klaren Blick für Qualität, Skalierbarkeit und Nutzerbedürfnisse.
+
+\vspace{1em}
+\bigskip
+
+\section*{Fachkenntnisse}
+\arrayrulecolor{black!20}
+\begin{tabular}{>{\footnotesize\bfseries}l >{\footnotesize}p{0.43\textwidth}}
+    Backend                  & Python, Django, C++, REST APIs \\
+    Frontend                 & HTML, CSS, JavaScript, Plotly, Dash \\
+    DevOps \& Automatisierung& Git, Docker, Home Assistant, ESPHome, PowerShell \\
+    \hline
+    Datenbanken              & PostgreSQL, MySQL \\
+    Datenanalyse             & Pandas, NumPy, SciPy, Statistica, MATLAB\\
+    KI \& ML                 & PyTorch, YOLO, LLM-Integration \\
+    \hline
+    Elektronik               & ESP32, Arduino, Raspberry Pi\\
+    Mechanische Konstruktion \& Prototyping & Autodesk Fusion 360, 3D-Druck \\
+    Projektmanagement        & Prototypenkoordination, technische Co-Leitung
+\end{tabular}
+\arrayrulecolor{black}
+
+\bigskip
+\section*{Arbeitsumfeld}
+\begin{tabular}{>{\footnotesize\bfseries}l >{\footnotesize}p{0.55\textwidth}}
+    Eigenverantwortliche Entwicklung & Von der Konzeption bis zur Umsetzung\\
+    Betriebssysteme                  & Linux (Ubuntu), Windows, macOS\\
+    Kollaboration                    & Slack, Teams, technische und wissenschaftliche Dokumentation\\
+    Interdisziplinäre Teams         & F\&E, Elektronik, Software\\
+    Mehrsprachiges Umfeld           & Tägliche Arbeit in Französisch, Englisch und Deutsch\\
+    Projektformen                   & Einzel- oder Teamprojekte, vor Ort oder remote\\
+\end{tabular}
+
+\bigskip
+\section*{Berufserfahrung}
+\begin{tabular}{r|p{0.55\textwidth} c}
+    \cvevent{09.2024}{Berater}{Freies Projekt}{Fiez \color{cvred}}{
+        Integration eines Photovoltaiksystems und einer Wärmepumpe in Home Assistant via ESP32. Erhöhung des Eigenverbrauchs um 20\%.
+    }{nothing.png}\\
+
+    \cvevent{01.2017 - 03.2025}{Senior Entwicklungsingenieur}{Meyer Burger Research}{Hauterive \color{cvred}}{
+        Entwicklung und Einführung einer Plattform für Datenmanagement und -analyse. 3× mehr Daten, 50\% Zeitersparnis.\newline
+        Mitentwicklung eines innovativen Dünnschichtverfahrens sowie der zugehörigen mechanischen Komponenten.\newline
+        Co-Leitung Entwicklung eines Plasmareaktors – Durchsatzsteigerung um 100\%.\newline
+        Versuchsplanung, statistische Analyse und Berichterstattung für die F\&E.
+    }{nothing.png}\\
+
+    \cvevent{09.2011 - 12.2016}{Entwicklungsingenieur}{Meyer Burger Research}{Hauterive \color{cvred}}{
+        Entwicklung von Dünnschichten – Reduktion der PECVD-Investitionskosten um 25\%.\newline
+        Entwicklung eines elektrischen Modells basierend auf genetischen Algorithmen.
+    }{nothing.png}\\
+\end{tabular}
+
+\vspace{2em}
+\vfill
+
+%----------------------------------------------------------------------------------------
+% FUẞBEREICH
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+    \small{—  April 2025  —}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+% Publications and Patents - Second Page
+\newpage
+
+\section*{Publikationen}
+\begin{itemize}
+    \item Legradic, B., A. A. Howling, and Ch Hollenstein. \textit{"Radio frequency breakdown between structured parallel plate electrodes with a millimetric gap in low pressure gases."} Physics of Plasmas 17, no. 10 (2010): 102111.
+    \item B. Legradic, \textit{"Arcing in Very Large Area Plasma-Enhanced Chemical Vapour Deposition Reactors,"} Dissertation, École Polytechnique Fédérale de Lausanne, 2011. \href{https://doi.org/10.5075/epfl-thesis-5090}{doi:10.5075/epfl-thesis-5090}
+    \item Howling, A. A., B. Legradic, M. Chesaux, and Ch Hollenstein. \textit{"Plasma deposition in an ideal showerhead reactor: a two-dimensional analytical solution."} Plasma Sources Sci. Technol. 21, no. 1 (2012): 015005.
+    \item Hermans, J. P., et al. \textit{"Inkjet printing for solar cell mass production on the PiXDRO JETx platform."} 28th Eur. PV Solar Energy Conf. Exhib., 2013.
+    \item Legradic, B., et al. \textit{"High efficiency Si-heterojunction technology—it's ready for mass production."} 2015 IEEE 42nd PVSC, pp. 1–3.
+    \item Papet, P., et al. \textit{"New cell metallization patterns for heterojunction solar cells interconnected by the smart wire connection technology."} Energy Procedia 67 (2015): 203–209.
+    \item Lachenal, D., et al. \textit{"Heterojunction and passivated contacts: a simple method to extract both n/tco and p/tco contacts resistivity."} Energy Procedia 92 (2016): 932–938.
+    \item Lachenal, D., et al. \textit{"Optimization of tunnel-junction IBC solar cells based on a series resistance model."} Sol. Energy Mater. Sol. Cells 200 (2019): 110036.
+    \item Papet, P., et al. \textit{"Overlap modules: A unique cell layup using smart wire connection technology."} AIP Conf. Proc. 2147, no. 1 (2019): 080001.
+    \item Legradic, B., et al. \textit{"Shadow masking and tunnel contacts: A low cost process for high efficiency IBC solar cells."} 2019 IEEE 46th PVSC, pp. 2546–2549.
+    \item Bätzner, D. L., et al. \textit{"Alleviating performance and cost constraints in silicon heterojunction cells with HJT 2.0."} 2019 IEEE 46th PVSC, Chicago, IL, pp. 1471–1474. \href{https://doi.org/10.1109/PVSC40753.2019.8980666}{doi:10.1109/PVSC40753.2019.8980666}
+    \item Ledinský, M., et al. \textit{"In-Line Thickness Imaging Tool and Detailed Study of Interdigitated Back-Contacts for Silicon Heterojunction Solar Cells."} Submitted to Solar Energy Materials and Solar Cells, 2024. Manuscript no. SOLMAT-D-24-01388.
+\end{itemize}
+
+\section*{Patente}
+\begin{itemize}
+    \item Kroll, U., and B. Legradic. \textit{"Plasma processing apparatus and method for the plasma processing of substrates."} US Patent App. 13/128,265, filed Nov. 10, 2011.
+    \item Strahm, B., Legradic, B., Meixenberger, J., Lachenal, D., and Papet, P. \textit{"Solar cell."} US Patent App. 15/323,492, filed June 8, 2017.
+    \item Lachenal, D., Strahm, B., Legradic, B., Frammelsberger, W. \textit{"Hetero junction photovoltaic cell and method of manufacturing same."} EP Patent EP3223318A1, filed Mar. 23, 2016.
+    \item Strahm, B., Legradic, B. \textit{"Substrate Treatment System."} EP Patent EP3399545A1, filed Apr. 5, 2017.
+\end{itemize}
+
+\end{document}
