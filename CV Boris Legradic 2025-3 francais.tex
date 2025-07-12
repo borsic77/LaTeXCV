@@ -4,12 +4,27 @@
 
 \documentclass[verylight]{simplehipstercv}
 % available options: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
-
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
 \usepackage[margin=1cm, a4paper]{geometry}
 \usepackage{colortbl}
 \usepackage{xcolor}
+\usepackage{eso-pic} % for page‑overlay hooks
+
+% Draw the dark title bar after paracol's background (first page only)
+\AddToShipoutPictureFG*{%
+  \ifnum\value{page}=1
+    % extra bleed on the left to cover the grey strip from the sidebar
+    \begin{tikzpicture}[remember picture,overlay]
+      \fill[headercolour]
+        ([xshift=-5mm]current page.north west)
+          rectangle
+        ([yshift=-3.5cm]current page.north east);
+    \end{tikzpicture}
+    \simpleheader{headercolour}{Dr. Boris}{Legradic}{Ingénieur R\&D et Développeur (De/Fr/En)}{white}
+  \fi
+}
+
 
 %------------------------------------------------------------------ Variables
 \newlength{\rightcolwidth}
@@ -29,7 +44,7 @@
 
 %-------------------------------------------------------------
 \section*{Start}
-\simpleheader{headercolour}{Dr. Boris}{Legradic}{Ingénieur R\&D et Développeur (De/Fr/En)}{white}
+
 
 % Required for paracol to start
 \subsection*{}

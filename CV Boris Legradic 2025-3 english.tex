@@ -11,9 +11,16 @@
 \usepackage{xcolor}
 \usepackage{eso-pic} % for page‑overlay hooks
 
-% Draw the dark title bar *after* paracol's background (first page only)
+% Draw the dark title bar after paracol's background (first page only)
 \AddToShipoutPictureFG*{%
   \ifnum\value{page}=1
+    % extra bleed on the left to cover the grey strip from the sidebar
+    \begin{tikzpicture}[remember picture,overlay]
+      \fill[headercolour]
+        ([xshift=-5mm]current page.north west)
+          rectangle
+        ([yshift=-3.5cm]current page.north east);
+    \end{tikzpicture}
     \simpleheader{headercolour}{Dr.~Boris}{Legradic}{R\&D Engineer and Developer (De/Fr/En)}{white}%
   \fi
 }
