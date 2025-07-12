@@ -4,12 +4,20 @@
 
 \documentclass[verylight]{simplehipstercv}
 % available options: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
-
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
 \usepackage[margin=1cm, a4paper]{geometry}
 \usepackage{colortbl}
 \usepackage{xcolor}
+\usepackage{eso-pic} % for page‑overlay hooks
+
+% Draw the dark title bar *after* paracol's background (first page only)
+\AddToShipoutPictureFG*{%
+  \ifnum\value{page}=1
+    \simpleheader{headercolour}{Dr.~Boris}{Legradic}{R\&D Engineer and Developer (De/Fr/En)}{white}%
+  \fi
+}
+
 
 %------------------------------------------------------------------ Variables
 \newlength{\rightcolwidth}
@@ -29,7 +37,7 @@
 
 %-------------------------------------------------------------
 \section*{Start}
-\simpleheader{headercolour}{Dr. Boris}{Legradic}{R\&D Engineer and Developer (De/Fr/En)}{white}
+%
 
 % Required here so paracols starts...
 \subsection*{}
@@ -64,7 +72,7 @@ Route des Mûriers 5\\
 
 \bigskip
 \href{https://legradic.ch}{legradic.ch \icon{\faGlobe}{cvgreen}{}}\\
-\href{mailto:boris.legradic@gmail.com}{boris.legradic@gmail.com \icon{\faAt}{cvgreen}{}}\\
+\href{mailto:boris@legradic.ch}{boris@legradic.ch \icon{\faAt}{cvgreen}{}}\\
 \href{https://www.linkedin.com/in/borislegradic}{borislegradic \icon{\faLinkedin}{cvgreen}{}}\\
 \href{https://github.com/borsic77}{borsic77 \icon{\faGithub}{cvgreen}{}}
 
